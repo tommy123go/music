@@ -1,0 +1,115 @@
+@media (max-width: 330px) {
+.music_player {
+    min-width: 240px;
+    width: 90%;
+    padding: 10px;
+}
+
+.wishlist,
+.playlist {
+    width: 90%;
+    left: 10px;
+}
+
+.wishlist {
+    height: 300px;
+}
+
+.header_des {
+    font-size: 24px;
+}
+
+.wishlist-song,
+.playlist-song {
+    width: 100%;
+    
+}
+.option-select__heading {
+    font-size: 16px;
+}
+.option-select__wrapper span {
+    font-size: 12px;   
+}
+.song {
+    width: 100%;
+}
+
+.title {
+    font-size: 15px;
+}
+
+
+.music_control {
+    width: 100%;
+    padding: 5px;
+    gap: 0 20px;
+   
+}
+
+.music_control i {
+    font-size: 20px;
+}
+} 
+
+
+
+/* Iphone 6/7/8 */
+@media (min-width: 331px) and (max-width: 739px) {
+   
+    .music_player {
+        max-width: 400px;
+        width: 90%;
+        padding: 10px;
+    }
+    
+    .wishlist,
+    .playlist {
+        width: 90%;
+        
+    }
+    
+    .wishlist {
+        height: 300px;
+    }
+    
+    .header_des {
+        font-size: 24px;
+    }
+    
+    .wishlist-song,
+    .playlist-song {
+        width: 100%;
+        
+    }
+    
+    .song {
+        width: 100%;
+    }
+    
+    .title {
+        font-size: 15px;
+    }
+    
+    
+    .music_control {
+        width: 100%;
+        padding: 5px;
+        gap: 0 25px;
+       
+    }
+    
+    .music_control i {
+        font-size: 24px;
+    }
+
+
+
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+ 
+
+
+
+
+}

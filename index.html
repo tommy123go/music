@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.css">
+
+
+</head>
+<body>
+    <div class="app">
+        <div class="music_player">
+            <div class="playlist">
+                <div class="playlist-header">
+                    <i class="fa-solid fa-music"></i>
+                    <span class="playlist-header_text">My Playlist</span>
+                    <div class="close-list">
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                </div>
+                <div class="playlist-song">
+                   
+                </div>    
+            </div>
+
+            <div class="wishlist">
+                <div class="wishlist-header">
+                    <i class="fa-solid fa-heart"></i>
+                    <span class="wishlist-header_text">My Wishlist</span>
+                    <div class="close-wishlist">
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                </div>
+                <div class="wishlist-song">
+                   
+                </div>  
+            </div>
+
+                <div class="music_header">
+                    <h2 class="header_des">Now Playing:</h2>
+                    <div class="wishlist-icon">
+                        <i class="fa-brands fa-gratipay"></i>
+                    </div>
+                    <div class="cd_wrapper">
+                        <img src="" class="songimg" alt= "">
+                    </div>
+                </div>
+                <div class="song_des">
+                    
+                </div>
+                    <div class="detail_process">
+                        <input type="range" name="progress" id="progress" class="progress" value="0" step="1" min="0" max="100">
+                        <audio src="" id="audio"></audio>
+                        <div class="timer">
+                            <div class="time_current"></div>
+                            <div class="time_duration"></div>
+                        </div>
+                    </div>
+                    <div class="music_control">
+                        <div class="selectsong">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                        <div class="backward">
+                            <i class="fa-solid fa-backward-step"></i>
+                        </div>
+                        <div class="play">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                        <div class="forward">
+                            <i class="fa-solid fa-forward-step"></i>
+                        </div>
+                        <div class="direction">
+                            <i class="fa-solid fa-repeat"></i>
+                        </div>
+                    </div>
+                
+                   
+
+                    <div class="overlay">
+                        <div class="option-select">
+                            <span class="option-select__heading">Your option?</span>
+                            <span class=" option-select__exit">
+                                <i class="fa-solid fa-x"></i>
+                            </span>
+                            <div class="option-select__wrapper">
+                                <span class="option-add">Add to wishlist</span>
+                                <span class="option-remove">Remove from wishlist</span>
+                            </div>
+                        </div>
+        </div>     
+    </div>
+
+ <script src="main.js"></script>
+</body>
+</html>

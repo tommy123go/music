@@ -1,0 +1,422 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+
+
+
+
+.app {
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-image: linear-gradient(to right bottom, #ff6bcb, #ffb86c);
+    position: relative;
+}
+
+.playlist {
+    z-index: 10;
+    position: fixed;
+    width: 360px;
+    height: 460px;
+    left: 20px;
+    top: 50px;
+    border-radius: 10px;
+    animation: runIn ease 0.4s;
+    display: none;
+}
+
+.wishlist {
+    z-index: 5;
+    position: absolute;
+    display: block;
+    width: 360px;
+    height: 400px;
+    left: 20px;
+    top: 120px;
+    /* background-color: #fff; */
+    display: none;
+ 
+}
+
+.wishlist-header {
+    padding: 8px;
+    width: 100%-8px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ec68aa 30%, #aa43aa 50%, #e46370 70%);
+}
+
+.playlist-header {
+    padding: 8px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #c78daa 30%, #e0cfe0 50%, #e9c2c6 70%);
+}
+
+.wishlist-header_text,
+.playlist-header_text {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.close-wishlist,
+.close-list {
+    display: block;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.wishlist-song {
+    width: 100%;
+    height: 340px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    background-color: #fff;
+}
+
+.playlist-song {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.wishlist-song::-webkit-scrollbar,
+.playlist-song::-webkit-scrollbar {
+    display: none;
+}
+
+.song {
+    display: flex;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 360px;
+    height: 70px;
+    box-shadow: 10px 10px 8px #888888;
+    margin: 10px 0px 0px;
+    align-items: center;
+    
+}
+
+.song:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #c7a6da 50%, #ffa3c5 100%);
+}
+
+.song.active {
+    color: gold;
+    background: linear-gradient(90deg, #c7a6da 50%, #ffa3c5 100%);
+}
+
+
+
+.thumb {
+    height: 70px;
+    width: 70px;
+    border-radius: 8px;
+    background-size: cover;
+}
+
+.body {
+    width: 250px;
+    height: 70px;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+}
+
+.title {
+    margin: 15px 0px 0px 0px;
+    font-size: 18px;
+    font-weight: 700px;
+
+}
+
+.author {
+    font-size: 15px;
+    margin: 0px 0px 15px 0px;
+}
+
+.option-wish,
+.option {
+    display: block;
+    width: 60px;
+    text-align: center;
+}
+
+
+
+.option-select {
+    position: absolute;
+    width: 90%;
+    max-width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #eba0b5;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: slideDown ease 0.5s;
+    display: none;
+}
+
+.option-select.arise  {
+    display: flex;
+}
+
+.option-select__heading {
+    font-size: 22px;
+    color: #000;
+    padding: 8px 12px 2px;
+    font-weight: 500;
+    cursor: default;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.option-select__wrapper {    
+    align-items: center;
+    width: 100%;
+    display: flex;
+
+}
+
+
+.option-select__wrapper span {
+    display: block;
+    padding: 12px;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.option-select__wrapper span:hover {
+    background-color: #e3789f;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.option-select__wrapper>:nth-child(1) {
+    flex: 1;
+}
+
+.option-select__wrapper>:nth-child(2) {
+    flex: 1;
+}
+
+.option-select__exit {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 10px 16px;
+}
+
+.option-select__exit:hover {
+    opacity: 0.5;
+    cursor: pointer;
+
+}
+
+.music_player {
+    z-index: 5;
+    width: 400px;
+    height: 520px;
+    border-radius: 10px;
+    background-color: #f9edf5;
+    padding: 16px;
+    border-radius: 10px;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.music_player.appear {
+    background: linear-gradient(135deg, #c7afbb 30%, #ac6e9f 50%, #da75a4 70%);
+
+}
+
+.music_header {
+    display: block;
+    position: relative;
+    /* display: none; */
+}
+
+.wishlist-icon  {
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-align: center; 
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.header_des {
+    display: block;
+    font-size: 32px;
+    text-align: center;
+    margin: 12px 0px;
+}
+
+
+.timer {
+    padding: 8px 0px;
+}
+
+.cd_wrapper {
+    justify-content: center;
+    text-align: center;
+    margin: 12px 0px;
+}
+
+.songimg {
+    height:200px ;
+    width:200px; 
+    border-radius: 100rem;
+}
+
+.song_des {
+    margin: 16px 0px;
+    /* display: none; */
+}
+
+.song_name {
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    padding: 8px;
+}
+
+.song_author {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+}
+
+
+#progress {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgb(223, 142, 142);
+}
+
+.progress:hover {
+    opacity: 1;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #00fd0a;
+    cursor: pointer;
+    border: 4px solid #333;
+    box-shadow: -407px 0 0 400px #00fd0a;
+}
+.progress::-moz-range-thumb {
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music_control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 45px;
+    height: 48px;
+    margin-top: 8px;
+    
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 12;
+    display: none;
+}
+
+.overlay.exist  {
+    display: block;
+}
+
+.fa-solid {
+    font-size: 32px;
+}
+
+.wishlist-icon i {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #f771a6;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+
+
+.fa-solid.fa-circle-pause,
+.fa-solid.fa-circle-play {
+    font-size: 48px;
+    color: #e73db4;
+}
+
+.fa-solid.fa-arrow-rotate-right,
+.fa-solid.fa-shuffle {
+    color: #f30374;
+}
+.fa-solid.fa-ellipsis {
+    font-size: 18px;
+}
+
+.fa-solid.fa-trash-can,
+.fa-music, .fa-x {
+    font-size: 24px ;
+}
+
+
